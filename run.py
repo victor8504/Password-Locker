@@ -49,3 +49,23 @@ def display_accounts():
     '''
 
     return User.display_accounts()
+
+def main():
+    print("Hey!! Welcome to your account list. What would you like to do?")
+    print('\n')
+
+    while True:
+        print("Use the following short codes : CA ~ Create a new account, DA ~ Display your accounts, FA ~ Find an account, EX ~ Exit the account list")
+
+        short_code = input().upper()
+        if short_code == 'CA':
+            print("New Account")
+            print("*"*15)
+
+            print("Account name ...")
+            acc_name = input()
+            
+
+if __name__ == '__main__':
+
+    main()

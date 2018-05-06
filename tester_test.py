@@ -17,7 +17,7 @@ class TestUser(unittest.TestCase):
         Set up method to run before each test cases
         '''
 
-        self.new_account = User("Victor Njuguna", "victormoore254@gmail.com", "victor8504") # create user object
+        self.new_account = User("Facebook", "victormoore254@gmail.com", "victor8504") # create user object
 
     def tearDown(self):
         
@@ -33,7 +33,7 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_account.account_name,"Victor Njuguna")
+        self.assertEqual(self.new_account.account_name,"Facebook")
         self.assertEqual(self.new_account.email_address,"victormoore254@gmail.com") 
         self.assertEqual(self.new_account.password,"victor8504")
 
@@ -55,7 +55,7 @@ class TestUser(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = User("Michy Bats", "michybats@gmail.com", "michybats") # new account
+        test_account = User("Twitter", "victormoore254@gmail.com", "michybats") # new account
         test_account.save_account()
         self.assertEqual(len(User.user_list),2)
 
@@ -66,7 +66,7 @@ class TestUser(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = User("Michy Bats", "michybats@gmail.com", "michybats") # new account
+        test_account = User("Twitter", "victormoore254@gmail.com", "michybats") # new account
         test_account.save_account()
 
         self.new_account.delete_account() # Deleting an account object
@@ -79,10 +79,10 @@ class TestUser(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = User("Michy Bats", "michybats@gmail.com", "michybats") # new account
+        test_account = User("Twitter", "victormoore254@gmail.com", "michybats") # new account
         test_account.save_account()
 
-        found_account = User.find_by_account_name("Michy Bats")
+        found_account = User.find_by_account_name("Twitter")
 
         self.assertEqual(found_account.email_address,test_account.email_address)
 
