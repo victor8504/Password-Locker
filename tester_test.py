@@ -71,6 +71,19 @@ class TestUser(unittest.TestCase):
         self.new_account.delete_account() # Deleting an account object
         self.assertEqual(len(User.user_list),1)
 
+    def test_find_account_by_account_name(self):
+
+        '''
+        test to check if we can find an account by account_name and display information
+        '''
+
+        self.new_account.save_account()
+        test_account = User("Michy Bats", "michybats@gmail.com", "michybats") # new account
+        test_account.save_account()
+
+        found_account = User.find_by_account_name("Michy Bats")
+
+        self.assertEqual(found_account.email_address,test_account.email_address)
 if __name__ == '__main__':
     unittest.main()
                         
