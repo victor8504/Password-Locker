@@ -28,3 +28,11 @@ class User:
         '''
 
         User.user_list.append(self)
+
+    def delete_account(self):
+
+        '''
+        delete_account method deletes a saved account from the user_list
+        '''
+
+        User.user_list.remove(self)
