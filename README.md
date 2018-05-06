@@ -9,8 +9,11 @@ This is a simple Python appliction that allows a user to generate and stoore pas
 This project can be accessed using the following link https://victor8504.github.io/Password-Locker/ 
 
 ## Setup/Installation Requirements
-* A user should  run ["python3.6 ('filename')"]command on your terminal.
-* Everything is well documented in the terminal from here
+* Clone the repository
+* Ensure you have python3.6 installed in your computer.
+* install pyperclip $ python3.6 -m pip install pyperclip
+* From the terminal navigate to the cloned project folder.
+* open terminal and go to the project folder, run $ ./run.py
 
 ## Requirments(for users)
 * To create an account with my details - log in and password

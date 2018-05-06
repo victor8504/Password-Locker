@@ -120,6 +120,6 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_account.email_address,pyperclip.paste())
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main() 
                         
     
