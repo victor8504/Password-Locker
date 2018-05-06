@@ -93,10 +93,10 @@ class TestUser(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = User("Michy Bats", "michybats@gmail.com", "michybats") # new account
+        test_account = User("Twitter", "michybats@gmail.com", "michybats") # new account
         test_account.save_account()
 
-        account_exists = User.account_exists("Michy Bats")
+        account_exists = User.account_exists("Twitter")
 
         self.assertTrue(account_exists)
 
