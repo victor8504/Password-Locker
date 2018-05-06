@@ -45,10 +45,31 @@ class User:
 
         Args:
             account_name: account name to search for
+
         Returns:
             account that matches the account_name
         '''
 
         for account in cls.user_list:
             if account.account_name == account_name:
-                return account 
+                return account
+
+    @classmethod
+    def account_exists(cls,account_name):
+
+        '''
+        Method that checks if an account exists from the user_list.
+
+        Args:
+            account_name: account name to search for
+
+        Returns:
+            Boolean: True or False depending if the account exists
+        '''
+
+        for account in cls.user_list:
+            if account.account_name == account_name:
+                return True
+
+        return False
+         
