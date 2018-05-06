@@ -41,3 +41,11 @@ def check_existing_accounts(account_name):
     '''
 
     return User.account_exists(account_name)
+
+def display_accounts():
+
+    '''
+    Function that returns all the saved accounts.
+    '''
+
+    return User.display_accounts()
