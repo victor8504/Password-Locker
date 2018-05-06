@@ -20,4 +20,14 @@ class Credential:
         self.password = password
         self.password_length = password_length
 
-    
+    @classmethod
+    def generate_password(cls, password_length):
+
+        '''
+        Method to generate a new password
+        '''
+
+        string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}|"';>./,`!@#$^&*()`'
+        account_password = "".join(random.sample(string, int(password_length)))
+        password = account_password
+        return password
