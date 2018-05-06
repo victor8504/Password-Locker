@@ -1,3 +1,4 @@
+import pyperclip # Impporting the pyperclip module
 class User:
 
     '''
@@ -81,4 +82,9 @@ class User:
         '''
 
         return cls.user_list
+
+    @classmethod
+    def copy_email_address(cls,account_name):
+        account_found = User.find_by_account_name(account_name)
+        pyperclip.copy(account_found.email_address)
          

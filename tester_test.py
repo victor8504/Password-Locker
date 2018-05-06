@@ -115,7 +115,7 @@ class TestUser(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        User.copy_email_address("Michy Bats")
+        User.copy_email_address("Victor Njuguna")
 
         self.assertEqual(self.new_account.email_address,pyperclip.paste())
 
