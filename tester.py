@@ -36,3 +36,19 @@ class User:
         '''
 
         User.user_list.remove(self)
+
+    @classmethod
+    def find_by_account_name(cls,account_name):
+
+        '''
+        Method that takes in an account_name and returns an account that matches that account_name.
+
+        Args:
+            account_name: account name to search for
+        Returns:
+            account that matches the account_name
+        '''
+
+        for account in cls.user_list:
+            if account.account_name == account_name:
+                return account 
