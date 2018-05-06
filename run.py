@@ -33,3 +33,11 @@ def find_account(account_name):
     '''
 
     return User.find_by_account_name(account_name)
+
+def check_existing_accounts(account_name):
+
+    '''
+    Function that check if an account exists with that account_name and returns a Boolean.
+    '''
+
+    return User.account_exists(account_name)
