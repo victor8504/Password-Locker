@@ -1,4 +1,5 @@
 import pyperclip # Impporting the pyperclip module
+import string
 import random
 class Credential:
 
@@ -21,13 +22,16 @@ class Credential:
         self.password_length = password_length
 
     @classmethod
-    def generate_password(cls, password_length):
+    def generate_password(password):
 
         '''
         Method to generate a new password
         '''
 
+
+        # alphabet = string.ascii_letters + string.digits
+        # password = ''.join(secrets.choice(alphabet) for i in range(5))
         string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}|"';>./,`!@#$^&*()`'
-        account_password = "".join(random.sample(string, int(password_length)))
+        account_password = "".join(random.sample(string, int(password)))
         password = account_password
         return password

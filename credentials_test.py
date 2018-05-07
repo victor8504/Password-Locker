@@ -43,7 +43,7 @@ class TestCredential(unittest.TestCase):
     #     """
 
     #     self.new_password.save_password()
-    #     random_password = self.new_password.password_gen("17")
+    #     random_account_password = self.new_password.password_gen("17")
     #     self.assertNotEqual(random_password, self.new_profile.account_password) 
 
 if __name__ == '__main__':
